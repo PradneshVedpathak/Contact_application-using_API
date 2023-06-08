@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Application using API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body class="p-3 mb-2 bg-info-subtle text-emphasis-info">
+    <div>
+        <h1 style="width: auto; font-weight: bold;">Contact Application using API</h1>
+    </div><br>
+
+    <div style="width: auto; margin-left: auto; margin-right: auto;">
+        <input class="form-control" id="userFirstName" placeholder="Enter first name..."><br>
+        <input class="form-control" id="userLastName" placeholder="Enter last name..."><br>
+        <input type="number" class="form-control" id="userNumber" placeholder="1234-56-7890"><br>
+
+        <div id="container">
+            <video autoplay="true" id="videoElement">
+        
+            </video>
+        </div>
+        
+        <button id="addUserbtn" class="btn btn-light" onclick="addData()">Add</button>
+        <button disabled id="updateUserBtn" class="btn btn-light" onclick="updateContact()">Update</button>
+    </div>
+    <br>
+    <table style="width: auto; margin: auto; border: 1px solid #000000"
+        class="table table-striped table table-bordered">
+        <thead class="table-dark" id="thead"></thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+</body>
+<script src="main.js"></script>
+
+</html>
