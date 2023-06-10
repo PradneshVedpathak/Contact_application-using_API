@@ -16,18 +16,23 @@
     </div><br>
 
     <div style="width: auto; margin-left: auto; margin-right: auto;">
-        <input class="form-control" id="userFirstName" placeholder="Enter first name..."><br>
-        <input class="form-control" id="userLastName" placeholder="Enter last name..."><br>
-        <input type="number" class="form-control" id="userNumber" placeholder="1234-56-7890"><br>
+        Enter first name: <input class="form-control" style="width: 30%;" id="userFirstName" placeholder="Enter first name..."><br>
+        Enter last name: <input class="form-control" style="width: 30%;" id="userLastName" placeholder="Enter last name..."><br>
+        Enter contact number: <input type="number" class="form-control" style="width: 30%;" id="userNumber" placeholder="1234-56-7890"><br>
 
-        <div id="container">
-            <video autoplay="true" id="videoElement">
-        
-            </video>
-        </div>
-        
-        <button id="addUserbtn" class="btn btn-light" onclick="addData()">Add</button>
-        <button disabled id="updateUserBtn" class="btn btn-light" onclick="updateContact()">Update</button>
+        Add profile image:<br>
+        <button class="btn btn-light" id="takePhoto" onclick="takePicture()">Take Photo</button>
+        <button class="btn btn-light" id="addDocument" onclick="addDocument()">Add Document</button>
+
+        <div hidden id="camera" style="width: 300px; height: 300px; border: 1px solid black;"></div><br>
+
+        <input hidden type="file" class="form-control" style="width: auto;" accept="image/png, image/jpg" id="chooseFile">
+        <button hidden class="btn btn-light" id="savePhoto" onclick="savePhoto()">Save Photo</button>
+
+        <br><br>
+        <button id="addUserbtn" class="btn btn-primary" onclick="addData()">Add</button>
+        <button hidden id="updateUserBtn" class="btn btn-primary" onclick="updateContact()">Update</button>
+
     </div>
     <br>
     <table style="width: auto; margin: auto; border: 1px solid #000000"
@@ -37,6 +42,7 @@
     </table>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
 <script src="main.js"></script>
 
 </html>
